@@ -1,38 +1,935 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    /* background: linear-gradient(to right, black, #111, #222, #333,#444, #555, #666); */
+    background-color: rgb(7, 7, 27);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section{
+    margin-top: 200px;
+}
+
+.fade-in {
+  display: block; /* This fixes the line break issue */
+  transition: all 0.7s ease-out;
+  opacity: 0;
+  transform: translateY(2rem); /* Start position */
+}
+
+.fade-in.visible {  
+  opacity: 1;
+  transform: translateY(0); /* End position */
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-classic {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.6rem;
+}
+
+.navbar {
+    position: fixed;
+    /* top: 20px; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 10px;
+    background-color: rgb(7, 7, 27);
+    color: white;
+    /* border-radius: 100px; */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s;
+  margin: 0 20px;
+}
+
+.navbar a:hover {
+  color: aquamarine;
+}
+
+/* pseudo-underline using transform */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;              /* adjust to sit under the text */
+  width: 100%;
+  height: 1.5px;               /* line thickness */
+  background: aquamarine;
+  transform: scaleX(0);
+  transform-origin: right;   /* for unhover collapse (left→right) */
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+  transform-origin: left;    /* for hover expand (left→right) */
+  transform: scaleX(1);
+}
+
+.navbar h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    /* letter-spacing: 2px; */
+    font-size: 32px;
+    color: white;
+    /* add some style flair */
+    /* letter-spacing: 2px; */
+    /* text-transform: uppercase; */
+    text-shadow: 1px 1px 2px #888;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.hamburger {
+  display: none;  /* hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.hamburger span {
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;           /* just under the navbar */
+  left: 50%;           /* center it under the navbar */
+  transform: translateX(-50%);
+  width: 90%;          /* same as your .navbar */
+  max-width: 1200px;   /* same cap as .navbar */
+  background: rgba(7,7,27);
+  border-radius: 8px;
+  overflow: hidden;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.visible {
+  transform: scaleY(1);
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;    /* left-align the text */
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 200px;
+    gap: 80px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-pic {
+  width: 400px;
+  max-width: 90%;   
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: fill;
+  /* display: block;    */
+}
+
+.top-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    /* margin-top: -180px; */
+    /* margin-left: 80px; */
+    /* min-height: 300px; */
+}
+
+.top-text>h1{
+    text-align: left;
+    font-weight: 900;
+    font-size: 70px;
+    margin-bottom: -6px;
+    margin-left: -2.5px;
+    color: aquamarine;
+}
+
+.top-text>p{
+    font-size: 30px;
+    text-align: left;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+/* Cursor + overflow hidden to avoid jiggle */
+.typing {
+  display: inline-block;
+  min-width: 1ch;          /* 1 character width even when empty */
+  height: 95px; 
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid aquamarine;
+  /* match your h1 styling */
+  font-weight: 900;
+  font-size: 70px;
+  color: aquamarine;
+  margin-bottom: -6px;
+  margin-left: -2.5px;
+  /* blink animation */
+  animation: blink-cursor 0.7s step-end infinite;
+}
+
+.section-head{
+    font-family: "Poppins", sans-serif;
+    color: aquamarine;
+    font-size: 80px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-content {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  min-height: 250px;
+  margin-top: -50px;
+}
+
+/* Fade only on text, not chevrons */
+.carousel-content.fade .carousel-text {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-text {
+  text-align: center;
+  margin: 0 2rem;
+  padding: 5px 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.chevron {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: white;
+  user-select: none;
+  opacity: 1; 
+}
+
+.chevron.left {
+  position: absolute;
+  left: 0.5rem;
+}
+
+.chevron.right {
+  position: absolute;
+  right: 0.5rem;
+}
+
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: aquamarine;
+}
+
+.domains {
+  display: flex;
+  flex-wrap: wrap;           /* allow wrapping if viewport is narrow */
+  justify-content: center;   /* center the row(s) */
+  align-items: flex-start;   /* align all cards to the top */
+  gap: 30px;                 /* uniform 30px between every box */
+  margin-top: 100px;
+  padding: 0 20px;           /* optional side padding so boxes never hug the edge */
+}
+
+.domain {
+  box-sizing: border-box;    /* include padding/border in your dims */
+  flex: 0 0 280px;           /* fixed 400px width, no grow/shrink */
+  height: 300px;             /* fixed height (adjust as needed) */
+
+  /* internal padding for content */
+  padding: 20px;
+
+  /* your visual styles */
+  border: 2px solid aquamarine;
+  border-radius: 30px;
+  background-color: rgb(16, 11, 41);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0px 8px 12px rgb(88, 48, 88);
+  
+  /* center your text/content vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.domain:hover{
+    background-color: rgb(7, 7, 27);
+    transition-duration: 500ms;
+    color: aquamarine;
+}
+
+.domain:not(:hover){
+    transition-duration: 500ms;
+}
+
+.technologies {
+  margin: 200px auto 0;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Sphere container */
+.tech-item {
+  width: 100px;           /* ball size */
+  height: 100px;
+  border-radius: 50%;     /* perfect circle */
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 16px 24px rgb(88, 48, 88); 
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo sizing */
+.tech-item img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  display: block;
+}
+
+.experience{
+    margin-top: 200px;
+}
+
+.experience>h2{
+    font-family: "Poppins", sans-serif;
+    color: aquamarine;
+    margin: 30px;
+    font-size: 80px;
+}
+
+.exp-box{
+    display: flex;
+    width: 70%;
+    margin: 200px auto;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.exp-header>img{
+  display: none;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.box h3{
+    font-family: "Poppins", sans-serif;
+    color: aquamarine;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.box>pre{
+    color: #ccc;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.box>p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    text-align: start;
+    margin-left: 8px;
+    line-height: 1.4rem;
+}
+
+.projects-container {
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.project {
+    width: 800px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 25%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 80px;  
+}
+
+.project img{
+    border-radius: 8px 8px 0px 0px;
+}
+
+.project>h3{
+    margin: 14px 10px;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.project>p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: start;
+    font-family: "Open Sans", sans-serif;
+    margin: 10px;
+    line-height: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.github-link {
+    position: absolute;
+  bottom: 16px;          /* distance from the bottom of .project */
+  right: 16px;           /* distance from the right edge of .project */
+  margin-top: 30px;
+}
+
+.github-link:hover {
+    transform: scale(1.1);
+    transition-duration: 0.25s;
+}
+
+.github-link:not(:hover) {
+    transition-duration: 0.25s;
+}
+
+.hobbies-section {
+  padding: 4rem 2rem;   
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 100px auto;
+  align-items: stretch;
+  width: 70%;
+}
+
+.hobby-card {
+  background: #1a3c86;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.hobby-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-image-wrapper img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+.hobby-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hobby-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.hobby-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0px 8px 12px rgb(88, 48, 88)
+}
+
+.contact-form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1a3c86;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 50%;
+  margin-left: 25%;
+  padding: 0.75rem;
+  background: #6a2b9e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #16346b;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+footer img {
+    margin: 8px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+@keyframes blink-cursor {
+  50% { border-color: transparent; }
+}
+
+@media (max-width: 1050px) {
+
+  .links {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar{
+    width: 100%;
   }
+
+  .navbar h2{
+    margin-left: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 20px;
+  } 
+
+  .top{
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 30px;
+  }
+
+  .profile-pic{
+    width: 250px;
+  }
+
+  .typing{
+    font-size: 50px !important;
+    min-width: 1ch;          /* 1 character width even when empty */
+    height: 70px; 
+  }
+
+  .top-text{
+    margin-top: 10px;
+    margin-left: 0px;
+    width: 80%;
+  }
+
+  .top-text>p{
+    font-size: 32px;
+  }
+
+  .section-head {
+    font-size: 50px;
+  }
+
+  section{
+    margin-top: 150px;
+  }
+
+  .carousel-content {
+    margin-top: 0px;
+  }
+
+  .carousel-container{
+    margin-top: 200px;
+  }
+
+  .projects-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project{
+    width: 60%;
+  }
+
+  .project>a>img{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+    .links {
+    display: none;
+  }
+
+  .navbar{
+    width: 100%;
+  }
+
+  .navbar h2{
+    margin-left: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 20px;
+  } 
+
+  .top{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .profile-pic{
+    width: 250px;
+  }
+
+  .typing{
+    font-size: 30px !important;
+    min-width: 1ch;          /* 1 character width even when empty */
+    height: 45px; 
+  }
+
+  .top-text{
+    margin-top: 10px;
+    margin-left: 0px;
+    width: 80%;
+  }
+
+  .top-text>p{
+    font-size: 18px;
+  }
+
+  section{
+    margin-top: 150px;
+  }
+
+  .section-head {
+    font-size: 30px;
+  }
+
+  .carousel-container{
+    width: 90%;
+  }
+
+  .carousel-content{
+    margin-top: -30px;
+    /* width: 80%; */
+    /* justify-content: center; */
+  }
+
+  .carousel-text{
+    font-size: 15px;
+  }
+
+  .carousel-dots{
+    margin-top: 0rem;
+  }
+
+  .domains {
+  display: flex;
+  flex-direction: column;           /* allow wrapping if viewport is narrow */
+  justify-content: center;   /* center the row(s) */
+  align-items: center;   /* align all cards to the top */
+  margin-top: 50px;
+}
+
+.domain {
+  min-width: 300px;
+}
+
+.technologies{
+  width: 80%;
+}
+
+.tech-item{
+  width: 50px;
+  height: 50px;
+}
+
+.experience{
+    margin-top: 200px;
+}
+
+.exp-box{
+  margin-top: 50px;
+    flex-direction: column;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.box h3{
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.box>pre{
+    font-size: 0.8rem;
+}
+
+.box>p{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.exp-box>img{
+  display: none;
+}
+
+.exp-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-header>img{
+  display: inline;
+  width: 50px;
+}
+
+.projects-container{
+    margin-top: 40px;
+  }
+
+  .project{
+    width: 80%;
+  }
+
+  .hobbies-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 90%;
+  }
+
+  .contact-form{
+    width: 70%;
+  }
+
 }
