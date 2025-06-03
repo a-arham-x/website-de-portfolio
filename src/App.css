@@ -25,10 +25,10 @@ section{
 }
 
 .fade-in {
-  display: block; /* This fixes the line break issue */
+  /* display: block;  */
   transition: all 0.7s ease-out;
   opacity: 0;
-  transform: translateY(2rem); /* Start position */
+  transform: translateY(2rem); 
 }
 
 .fade-in.visible {  
@@ -163,7 +163,7 @@ a:active {
   top: 100%;           /* just under the navbar */
   left: 50%;           /* center it under the navbar */
   transform: translateX(-50%);
-  width: 90%;          /* same as your .navbar */
+  width: 100%;          /* same as your .navbar */
   max-width: 1200px;   /* same cap as .navbar */
   background: rgba(7,7,27);
   border-radius: 8px;
@@ -263,6 +263,32 @@ a:active {
   margin-left: -2.5px;
   /* blink animation */
   animation: blink-cursor 0.7s step-end infinite;
+}
+
+.resume-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.get-resume{
+  background-color: #07071B;
+  border: 2px solid #742ab0;
+  box-shadow: 0px 4px 6px rgb(88, 48, 88); 
+  padding: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.get-resume:hover{
+  background-color: rgb(7, 7, 27);
+  transition-duration: 500ms;
+}
+
+.get-resume:not(:hover){
+  transition-duration: 500ms;
 }
 
 .section-head{
@@ -782,7 +808,7 @@ footer img {
 
 @media (max-width: 768px) {
 
-    .links {
+  .links {
     display: none;
   }
 
@@ -824,12 +850,24 @@ footer img {
     font-size: 18px;
   }
 
+  .get-resume{
+    padding: 10px;
+    font-size: 10px;
+  }
+
   section{
     margin-top: 150px;
   }
 
-  .section-head {
+  .section-head-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section-head{
     font-size: 30px;
+    max-width: 80%;
   }
 
   .carousel-container{

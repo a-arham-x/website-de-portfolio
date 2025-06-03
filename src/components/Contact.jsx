@@ -6,7 +6,11 @@ function Contact() {
         <>
             <section id="contact">
                 <FadeIn>
-                    <h2 className="section-head">Contact me</h2>
+                    <div className="section-head-container">
+                        <h2 className="section-head">
+                            Contact me
+                        </h2>
+                    </div>
                     <ContactForm />
                 </FadeIn>
             </section>

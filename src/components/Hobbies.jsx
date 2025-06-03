@@ -22,7 +22,11 @@ function Hobbies() {
     return (
         <section id="hobbies" className="hobbies-section">
             <FadeIn>
-                <h2 className="section-head">My Hobbies</h2>
+                <div className="section-head-container">
+                    <h2 className="section-head">
+                        My Hobbies
+                    </h2>
+                </div>
             </FadeIn>
             <div className="hobbies-grid">
                 {hobbies.map((hobby, i) => (

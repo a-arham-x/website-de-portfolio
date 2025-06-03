@@ -11,26 +11,30 @@ function Skills() {
         <>
             <section id="skills">
                 <FadeIn>
-                    <h2 className="section-head">Skill Set</h2>
+                    <div className="section-head-container">
+                        <h2 className="section-head">
+                            Skill Set
+                        </h2>
+                    </div>
                 </FadeIn>
                 <FadeIn>
                     <div className="domains">
-                        <div className="domain">
+                        <FadeIn className="domain">
                             <img src={web} alt="an image" width="70" />
                             Web Development
-                        </div>
-                        <div className="domain">
+                        </FadeIn>
+                        <FadeIn className="domain">
                             <img src={mobile} alt="an image" width="70" />
                             Rest APIs
-                        </div>
-                        <div className="domain">
+                        </FadeIn>
+                        <FadeIn className="domain">
                             <img src={creator} alt="an image" width="70" />
                             Frontend Development
-                        </div>
-                        <div className="domain">
+                        </FadeIn>
+                        <FadeIn className="domain">
                             <img src={backend} alt="an image" width="70" />
                             Databases
-                        </div>
+                        </FadeIn>
                     </div>
                 </FadeIn>
                 {/* <div class="box">
@@ -46,33 +50,33 @@ function Skills() {
                 {/* <h2>My Skill Set</h2> */}
                 <FadeIn>
                     <div class="technologies">
-                        <div class="tech-item">
+                        <FadeIn className="tech-item">
                             <img src={require("./images/python-logo.png")} alt="python logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/js-logo.png")} alt="java script logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/html-logo.png")} alt="html logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/css-logo.png")} alt="css logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/react-logo.png")} alt="react logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/express-logo.png")} alt="express js logo" width="100" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/mongodb-logo.png")} alt="mongodb logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/flask-logo.png")} alt="flask logo" />
-                        </div>
-                        <div class="tech-item">
+                        </FadeIn>
+                        <FadeIn className="tech-item">
                             <img src={require("./images/postgresql-logo.png")} alt="postgresql logo" />
-                        </div>
+                        </FadeIn>
                     </div>
                 </FadeIn>
             </section>

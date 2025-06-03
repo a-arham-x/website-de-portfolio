@@ -6,11 +6,15 @@ function Projects() {
         <>
             <section id="projects">
                 <FadeIn>
-                    <h2 className="section-head">Projects</h2>
+                    <div className="section-head-container">
+                        <h2 className="section-head">
+                            Projects
+                        </h2>
+                    </div>
                 </FadeIn>
                 <FadeIn>
                     <div class="projects-container">
-                        <div class="project">
+                        <FadeIn className="project">
                             <a
                                 href="https://bakery-management-system-app.vercel.app/"
                                 target="_blank"
@@ -44,8 +48,8 @@ function Projects() {
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>
                             </div>
-                        </div>
-                        <div class="project">
+                        </FadeIn>
+                        <FadeIn className="project">
                             <a href="https://our-own-notes.vercel.app/" target="_blank">
                                 <img
                                     src={require("./images/nb-pic2.png")}
@@ -71,8 +75,8 @@ function Projects() {
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>
                             </div>
-                        </div>
-                        <div class="project">
+                        </FadeIn>
+                        <FadeIn className="project">
                             <a href="https://event-manager-web.vercel.app/" target="_blank">
                                 <img
                                     src={require("./images/em-pic1.png")}
@@ -98,8 +102,8 @@ function Projects() {
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>
                             </div>
-                        </div>
-                        <div class="project">
+                        </FadeIn>
+                        <FadeIn className="project">
                             <a href="https://finance-buddy-hazel.vercel.app/" target="_blank">
                                 <img
                                     src={require("./images/et-pic3.png")}
@@ -124,8 +128,8 @@ function Projects() {
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>
                             </div>
-                        </div>
-                        <div class="project">
+                        </FadeIn>
+                        <FadeIn className="project">
                             <a href="https://photo-editor-ashy.vercel.app/" target="_blank">
                                 <img
                                     src={require("./images/pea-pic2.png")}
@@ -151,7 +155,7 @@ function Projects() {
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>
                             </div>
-                        </div>
+                        </FadeIn>
                     </div>
                 </FadeIn>
             </section >

@@ -5,7 +5,11 @@ function Experience() {
         <>
             <div className="experience">
                 <FadeIn>
-                    <h2 className="section-head">Work Experience</h2>
+                    <div className="section-head-container">
+                        <h2 className="section-head">
+                            Work Experience
+                        </h2>
+                    </div>
                 </FadeIn>
                 <FadeIn>
                     <div className="exp-box">

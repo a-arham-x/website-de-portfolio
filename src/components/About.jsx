@@ -39,7 +39,9 @@ function About() {
     return (
         <section {...swipeHandlers} className="carousel-container">
             <FadeIn>
-                <h2 className="section-head">Overview</h2>
+                <div className="section-head-container">
+                    <h2 className="section-head">Overview</h2>
+                </div>
 
                 <div className={`carousel-content ${transitionState ? "fade" : ""}`}>
                     <button
@@ -59,7 +61,7 @@ function About() {
                     </button>
                 </div>
             </FadeIn>
-            <div className="carousel-dots">
+            <FadeIn className="carousel-dots">
                 {content.map((_, idx) => (
                     <span
                         key={idx}
@@ -67,7 +69,7 @@ function About() {
                         onClick={() => setCurrentIndex(idx)}
                     />
                 ))}
-            </div>
+            </FadeIn>
             {/* <Education /> */}
             {/* <Experience /> */}
         </section>

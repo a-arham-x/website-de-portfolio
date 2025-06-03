@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FadeIn from './FadeIn';
+import ResumeDownloader from './ResumeDownloader';
 
 function Home() {
     const fullText = "Hi, I'm Arham";
@@ -42,6 +43,7 @@ function Home() {
                         <p>
                             I'm a Full Stack Developer and develop websites, user interfaces and software applications
                         </p>
+                        <ResumeDownloader />
                     </div>
                 </div>
             </section>
