@@ -161,7 +161,6 @@ a:active {
 .mobile-nav {
   position: absolute;
   top: 100%;           /* just under the navbar */
-  left: 50%;           /* center it under the navbar */
   transform: translateX(-50%);
   width: 100%;          /* same as your .navbar */
   max-width: 1200px;   /* same cap as .navbar */
