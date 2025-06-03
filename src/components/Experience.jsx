@@ -18,7 +18,7 @@ function Experience() {
                                 <h3>Web Developer at Upwork</h3>
                                 <img src={require("./images/upwork.jpeg")} alt="" width="300" />
                             </div>
-                            <pre>Aug 2023 - Present</pre>
+                            <pre>August 2023 - Present</pre>
                             <p>
                                 I am currently a full-time web developer on Upwork, dedicated to
                                 exceeding client expectations through exceptional work. My approach
@@ -42,7 +42,7 @@ function Experience() {
                                 <h3>Software Engineer Intern at Onebyte</h3>
                                 <img src={require("./images/onebyte.jpeg")} alt="" width="300" />
                             </div>
-                            <pre>July 2023 - Auguest 2023</pre>
+                            <pre>July 2023 - August 2023</pre>
                             <p>
                                 Worked as a Software Engineer Intern at Onebyte. During this
                                 internship, I worked with industry professionals to provide solution
