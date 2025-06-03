@@ -318,12 +318,17 @@ a:active {
   justify-content: center;
   position: relative;
   min-height: 250px;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 /* Fade only on text, not chevrons */
 .carousel-content.fade .carousel-text {
   opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.carousel-content.appear .carousel-text {
+  opacity: 1;
   transition: opacity 0.4s ease;
 }
 

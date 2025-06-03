@@ -43,7 +43,7 @@ function About() {
                     <h2 className="section-head">Overview</h2>
                 </div>
 
-                <div className={`carousel-content ${transitionState ? "fade" : ""}`}>
+                <div className={`carousel-content ${transitionState ? "fade" : "appear"}`}>
                     <button
                         className="chevron left"
                         onClick={handlePrev}
