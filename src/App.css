@@ -17,7 +17,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 100%; */
+    /* overflow-x: hidden; 
+    width: 100%; */
 }
 
 section{
@@ -101,7 +102,7 @@ section{
 }
 
 .navbar h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 900;
     /* letter-spacing: 2px; */
     font-size: 32px;
@@ -194,7 +195,6 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Poppins", sans-serif;
     width: 80%;
     margin: auto;
     margin-bottom: 200px;
@@ -236,11 +236,13 @@ a:active {
     font-size: 70px;
     margin-bottom: -6px;
     margin-left: -2.5px;
+    font-family: "Poppins", sans-serif;
     color: aquamarine;
 }
 
 .top-text>p{
     font-size: 30px;
+    font-family: "Open Sans", sans-serif;
     text-align: left;
     margin-top: 10px;
     letter-spacing: 2px;
@@ -276,7 +278,7 @@ a:active {
   box-shadow: 0px 4px 6px rgb(88, 48, 88); 
   padding: 15px;
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   border-radius: 5px;
 }
@@ -290,6 +292,43 @@ a:active {
   transition-duration: 500ms;
 }
 
+.overview-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 40px 60px;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid aquamarine;
+  border-radius: 16px;
+  box-shadow: 0px 8px 12px rgb(88, 48, 88);
+  background-color: #010113;
+  text-align: center;
+}
+
+
+
+.overview-card-wrapper {
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-in {
+  opacity: 1;
+}
+
+.slide-out {
+  opacity: 0;
+}
+
+.overview-text {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
 .section-head{
     font-family: "Poppins", sans-serif;
     color: aquamarine;
@@ -297,88 +336,6 @@ a:active {
     letter-spacing: 3px;
     font-weight: 900;
     text-align: center;
-}
-
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 1rem;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.carousel-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 250px;
-  margin-top: -40px;
-}
-
-/* Fade only on text, not chevrons */
-.carousel-content.fade .carousel-text {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.carousel-content.appear .carousel-text {
-  opacity: 1;
-  transition: opacity 0.4s ease;
-}
-
-.carousel-text {
-  text-align: center;
-  margin: 0 2rem;
-  padding: 5px 50px;
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-.chevron {
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  color: white;
-  user-select: none;
-  opacity: 1; 
-}
-
-.chevron.left {
-  position: absolute;
-  left: 0.5rem;
-}
-
-.chevron.right {
-  position: absolute;
-  right: 0.5rem;
-}
-
-
-.carousel-dots {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ccc;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.dot.active {
-  background: aquamarine;
 }
 
 .domains {
@@ -404,7 +361,7 @@ a:active {
   border-radius: 30px;
   background-color: rgb(16, 11, 41);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 900;
   text-align: center;
@@ -509,14 +466,15 @@ a:active {
 .box>pre{
     color: #ccc;
     font-size: 1rem;
-    margin: 10px;
+    font-family: "Open Sans", sans-serif;
+    margin: 10px 0px;
 }
 
 .box>p{
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
     text-align: start;
-    margin-left: 8px;
+    /* margin-left: 8px; */
     line-height: 1.4rem;
 }
 
@@ -547,7 +505,7 @@ a:active {
 .project>h3{
     margin: 14px 10px;
     font-size: 1.5rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .project>p {
@@ -590,16 +548,17 @@ a:active {
 }
 
 .hobby-card {
-  background: #1a3c86;
+  background-color: rgb(7, 7, 27);
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 3px rgb(79, 72, 209);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   color: white;
   font-family: "Open Sans", sans-serif;
+  border: 2px solid rgb(17, 21, 67);
 }
 
 .hobby-card:hover {
@@ -653,7 +612,7 @@ a:active {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   border: 2px solid #ccc;
   border-radius: 20px;
   box-shadow: 0px 8px 12px rgb(88, 48, 88)
@@ -683,6 +642,7 @@ a:active {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 0.95rem;
+  font-family: "Open Sans", sans-serif;
   transition: border-color 0.2s ease;
 }
 
@@ -705,6 +665,7 @@ a:active {
   color: #fff;
   border: none;
   border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -778,20 +739,16 @@ footer img {
     font-size: 32px;
   }
 
+  .overview-text {
+    font-size: 1.5rem;
+  }
+
   .section-head {
     font-size: 50px;
   }
 
   section{
     margin-top: 150px;
-  }
-
-  .carousel-content {
-    margin-top: 0px;
-  }
-
-  .carousel-container{
-    margin-top: 200px;
   }
 
   .projects-container{
@@ -869,40 +826,18 @@ footer img {
     text-align: center;
   }
 
+  .overview-card {
+    width: 40%;
+  }
+
+  .overview-text {
+    font-size: 1rem;
+  }
+
   .section-head{
     font-size: 30px;
     max-width: 80%;
   }
-
-  .carousel-container{
-    width: 90%;
-  }
-
-  .carousel-content{
-    margin-top: -30px;
-    /* width: 80%; */
-    /* justify-content: center; */
-  }
-
-  .carousel-text{
-    font-size: 15px;
-  }
-
-  .carousel-dots{
-    margin-top: 0rem;
-  }
-
-  .domains {
-  display: flex;
-  flex-direction: column;           /* allow wrapping if viewport is narrow */
-  justify-content: center;   /* center the row(s) */
-  align-items: center;   /* align all cards to the top */
-  margin-top: 50px;
-}
-
-.domain {
-  min-width: 300px;
-}
 
 .technologies{
   width: 80%;
@@ -926,7 +861,7 @@ footer img {
 
 .box h3{
     font-size: 20px;
-    margin-left: 8px;
+    /* margin-left: 8px; */
 }
 
 .box>pre{
