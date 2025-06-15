@@ -22,7 +22,6 @@ function Projects() {
                                 <img
                                     src={require("./images/bms-pic2.png")}
                                     alt="Project Screenshot"
-                                    width="380"
                                 />
                             </a>
                             <h3>Bakery Management System</h3>
@@ -54,7 +53,6 @@ function Projects() {
                                 <img
                                     src={require("./images/nb-pic2.png")}
                                     alt="Project Screenshot"
-                                    width="380"
                                 />
                             </a>
                             <h3>Our Own Notes</h3>
@@ -77,11 +75,37 @@ function Projects() {
                             </div>
                         </FadeIn>
                         <FadeIn className="project">
+                            <a
+                                target="_blank"
+                            >
+                                <img
+                                    src={require("./images/rn-pic1.png")}
+                                    alt="Project Screenshot"
+                                />
+                            </a>
+                            <h3>Whatsapp UI Clone</h3>
+                            <p>
+                                A clone of the Whatsapp App that I have built in React Native. In this static mobile app, I have
+                                developed four screens of the whatsapp app, the chats screen where you access
+                                all your chats, the updates screen for viewing and uploading status, the communities
+                                screen where you can see all the communities you have joined and the calls screen that
+                                shows the call logs. In this application I have made sure that I adhere to
+                                all the UI/UX principles as done by Whatsapp.
+                            </p>
+                            <div class="github-link">
+                                <a
+                                    href="https://github.com/a-arham-x/whatsapp-ui-clone"
+                                    target="_blank"
+                                >
+                                    <img src={require("./images/github-logo.png")} alt="" width="50" />
+                                </a>
+                            </div>
+                        </FadeIn>
+                        <FadeIn className="project">
                             <a href="https://event-manager-web.vercel.app/" target="_blank">
                                 <img
                                     src={require("./images/em-pic1.png")}
                                     alt="Project Screenshot"
-                                    width="380"
                                 />
                             </a>
                             <h3>Event Manager</h3>
@@ -108,7 +132,6 @@ function Projects() {
                                 <img
                                     src={require("./images/et-pic3.png")}
                                     alt="Project Screenshot"
-                                    width="380"
                                 />
                             </a>
                             <h3>Finance Buddy(Expense Tracking App)</h3>
@@ -134,7 +157,6 @@ function Projects() {
                                 <img
                                     src={require("./images/pea-pic2.png")}
                                     alt="Project Screenshot"
-                                    width="380"
                                 />
                             </a>
                             <h3>Photo Editor Web App</h3>

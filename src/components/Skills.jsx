@@ -29,7 +29,7 @@ function Skills() {
                         </FadeIn>
                         <FadeIn className="domain">
                             <img src={creator} alt="an image" width="70" />
-                            Frontend Development
+                            Mobile Development
                         </FadeIn>
                         <FadeIn className="domain">
                             <img src={backend} alt="an image" width="70" />
