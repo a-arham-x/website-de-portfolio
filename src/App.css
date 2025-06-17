@@ -445,6 +445,10 @@ a:active {
     gap: 50px;
 }
 
+.exp-reverse{
+  flex-direction: row-reverse;
+}
+
 .exp-header>img{
   display: none;
 }
