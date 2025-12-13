@@ -57,10 +57,10 @@ function Skills() {
                             <img src={require("./images/js-logo.png")} alt="java script logo" />
                         </FadeIn>
                         <FadeIn className="tech-item">
-                            <img src={require("./images/html-logo.png")} alt="html logo" />
+                            <img src={require("./images/aws-logo.png")} alt="aws logo" />
                         </FadeIn>
                         <FadeIn className="tech-item">
-                            <img src={require("./images/css-logo.png")} alt="css logo" />
+                            <img src={require("./images/nextjs-logo.png")} alt="nextjs logo" />
                         </FadeIn>
                         <FadeIn className="tech-item">
                             <img src={require("./images/react-logo.png")} alt="react logo" />
