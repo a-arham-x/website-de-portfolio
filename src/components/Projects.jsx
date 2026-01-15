@@ -22,6 +22,17 @@ function Projects() {
             githubLink: "https://github.com/a-arham-x/bakery-management-system"
         },
         {
+            url: "https://play.google.com/store/apps/details?id=com.emploirapide",
+            img: require("./images/emploirapide.png"),
+            title: "Emploirapide Mobile App",
+            description: `Emploirapide is a React Native mobile application that I developed to help a client
+                         connect job seekers with potential employers. The app allows users to create profiles,
+                         browse job listings, and apply for jobs directly through the platform. It features a user-friendly
+                         interface and seamless navigation to enhance the overall user experience. The application is
+                         available on the Google Play Store.`,
+            githubLink: "#"
+        },
+        {
             url: "https://our-own-notes.vercel.app/",
             img: require("./images/nb-pic2.png"),
             title: "Our Own Notes",
