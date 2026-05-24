@@ -112,6 +112,7 @@ function Projects() {
                             <a
                                 href={project.url}
                                 target="_blank"
+                                rel="noreferrer"
                             >
                                 <img
                                     src={project.img}
@@ -126,6 +127,7 @@ function Projects() {
                                 <a
                                     href={project.githubLink}
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     <img src={require("./images/github-logo.png")} alt="" width="50" />
                                 </a>

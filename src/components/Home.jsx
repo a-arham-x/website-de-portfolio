@@ -6,7 +6,6 @@ function Home() {
     const fullText = "Hi, I'm Arham";
     const [text, setText] = useState('');
     const [isDeleting, setDeleting] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         let timer;
@@ -35,7 +34,7 @@ function Home() {
                         <img
                             className="profile-pic"
                             src={require("./images/my_pic1.png")}
-                            alt="A picture of me"
+                            alt="My portrait"
                         />
                     </div>
                     <div className="top-text">

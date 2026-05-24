@@ -20,19 +20,19 @@ function Skills() {
                 <FadeIn>
                     <div className="domains">
                         <FadeIn className="domain">
-                            <img src={web} alt="an image" width="70" />
+                            <img src={web} alt="web development icon" width="70" />
                             Web Development
                         </FadeIn>
                         <FadeIn className="domain">
-                            <img src={mobile} alt="an image" width="70" />
+                            <img src={mobile} alt="mobile apps icon" width="70" />
                             Rest APIs
                         </FadeIn>
                         <FadeIn className="domain">
-                            <img src={creator} alt="an image" width="70" />
+                            <img src={creator} alt="content creation icon" width="70" />
                             Mobile Development
                         </FadeIn>
                         <FadeIn className="domain">
-                            <img src={backend} alt="an image" width="70" />
+                            <img src={backend} alt="backend systems icon" width="70" />
                             Databases
                         </FadeIn>
                     </div>
