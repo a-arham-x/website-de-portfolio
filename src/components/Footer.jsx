@@ -22,7 +22,11 @@ function Footer() {
                     <a href="https://wa.me/+923175271509" target="_blank" rel="noreferrer">
                         <img src={require("./images/whatsapp.png")} alt="whatsapp logo" />
                     </a>
-                    <a href="mailto:abdul.arham9123@gmail.com" target="_blank" rel="noreferrer">
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=abdul.arham9123@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <img src={require("./images/gmail.png")} alt="gmail logo" />
                     </a>
                 </footer>
