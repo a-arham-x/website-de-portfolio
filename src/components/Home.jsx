@@ -34,7 +34,7 @@ function Home() {
                     <div className="image-container">
                         <img
                             className="profile-pic"
-                            src={require("./images/my_pic1.jpg")}
+                            src={require("./images/my_pic1.png")}
                             alt="A picture of me"
                         />
                     </div>
