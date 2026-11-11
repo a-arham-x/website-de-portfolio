@@ -3,10 +3,35 @@ import FadeIn from "./FadeIn";
 function Experience() {
     const experiences = [
         {
+            title: "Software Engineer at Recce",
+            img: require("./images/recce.jpeg"),
+            duration: "June 2026 - Present",
+            description: `Recce is a movie discovery and review platform that allows users to share 
+                          their opinions, explore reviews, and discover their next watch. As a Software Engineer 
+                          at Recce, I have contributed to the development, maintenance, and continuous improvement 
+                          of the platform. I have worked closely with the team to build and deliver a product that 
+                          meets user expectations while providing a seamless experience. My contributions span 
+                          multiple areas of software engineering, including web development, mobile application 
+                          development, and DevOps, giving me hands-on experience across the product development lifecycle.`,
+            reverse: false
+        },
+        {
+            title: "Associate Software Engineer at Stax3",
+            img: require("./images/stax3.jpeg"),
+            duration: "June 2025 - May 2026",
+            description: `Stax3 is a software development company providing 
+                          software solutions and services to clients worldwide. During my time 
+                          at Stax3, I contributed to the development of a web-based platform that 
+                          allows users to create and deploy AI-powered chatbot agents on their websites.
+                          I also worked on maintaining and enhancing a no-code gaming platform, contributing 
+                          to its ongoing development and ensuring its functionality and reliability.`,
+            reverse: true
+        },
+        {
             title: "Web Developer at Upwork",
             img: require("./images/upwork.jpeg"),
-            duration: "August 2023 - Present",
-            description: `I am currently a full-time web developer on Upwork, dedicated to
+            duration: "August 2023 - May 2025",
+            description: `I worked as a full-time web developer on Upwork, dedicated to
                           exceeding client expectations through exceptional work. My approach
                           involves thoroughly understanding client requirements to deliver
                           projects that align perfectly with their vision. I specialize in both
