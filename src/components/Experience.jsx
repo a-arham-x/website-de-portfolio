@@ -5,7 +5,7 @@ function Experience() {
         {
             title: "Software Engineer at Recce",
             img: require("./images/recce.jpeg"),
-            duration: "June 2026 - Present",
+            duration: "March 2025 - Present",
             description: `Recce is a movie discovery and review platform that allows users to share 
                           their opinions, explore reviews, and discover their next watch. As a Software Engineer 
                           at Recce, I have contributed to the development, maintenance, and continuous improvement 
